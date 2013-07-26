@@ -46,8 +46,8 @@ class Set < Thor
   end
 
 
-  desc "e", "Edit Tests"
-  def e
+  desc "edit", "Edit Tests"
+  def edit
     copy_environment("edit")
   end
 end
