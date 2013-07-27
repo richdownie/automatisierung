@@ -14,7 +14,7 @@ class Set < Thor
     copy_environment("chrome")
   end
 
-  desc "safari", "Run Tests in Safari"
+  desc "safari", "Run Tests in Safari with Saucelabs"
   def safari
     copy_environment("safari")
   end
@@ -32,16 +32,6 @@ class Set < Thor
   desc "ipad", "Run tests in iPhone with Saucelabs"
   def ipad
     copy_environment("ipad")
-  end
-
-  desc "iphone", "Run tests in iPhone with Saucelabs"
-  def iphone
-    copy_environment("iphone")
-  end
-
-  desc "android_phone", "Run tests in Android Phone with Saucelabs"
-  def android_phone
-    copy_environment("android_phone")
   end
 
   desc "edit", "Edit Tests"
