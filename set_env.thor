@@ -24,14 +24,14 @@ class Set < Thor
     copy_environment("firefox")
   end
 
-  desc "IE9", "Run tests in IE9 with Saucelabs"
-  def IE9
-    copy_environment("IE9")
-  end
-
   desc "IE10", "Run tests in IE10 with Saucelabs"
   def IE10
     copy_environment("IE10")
+  end
+
+  desc "ipad", "Run tests in iPhone with Saucelabs"
+  def ipad
+    copy_environment("ipad")
   end
 
   desc "iphone", "Run tests in iPhone with Saucelabs"
@@ -39,12 +39,10 @@ class Set < Thor
     copy_environment("iphone")
   end
 
-
-  desc "android", "Run tests in Android with Saucelabs"
-  def android
-    copy_environment("android")
+  desc "android_phone", "Run tests in Android Phone with Saucelabs"
+  def android_phone
+    copy_environment("android_phone")
   end
-
 
   desc "edit", "Edit Tests"
   def edit

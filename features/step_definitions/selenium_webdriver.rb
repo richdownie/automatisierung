@@ -136,5 +136,9 @@ Given /I scroll to "(.*)" "(.*)"/ do |right_by, down_by|
   @driver.action.move_by(right_by.to_i, down_by.to_i).perform
 end
 
-
+Given /I add cookie "(.*)" with value "(.*)"/ do |name, value|
+  @driver.manage.add_cookie({:name => "#{name}", :value => "#{value}", :path => "/"})
+  @driver.navigate.refresh
+  # puts @driver.manage.all_cookies.each { |c| puts c.inspect }
+end
 
