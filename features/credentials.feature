@@ -1,5 +1,6 @@
 Feature: Credential Scenarios
 
+@desktop
 Scenario: Desktop Login/Logout with Facebook
   * I am on the wunderlist home page
   * I xpath "Log In" "text"
@@ -8,11 +9,22 @@ Scenario: Desktop Login/Logout with Facebook
   * I click_on "avatar" "class"
   * I click_on "logout" "class"
 
-Scenario: Mobile Login/Logout with Facebook
+@ipad
+Scenario: Mobile iPad Login/Logout with Facebook
   * I am on the wunderlist home page
   * I xpath "Log In" "text"
   * I xpath "Log In With Facebook" "text"
-  * I submit mobile login form
+  * I submit iPad login form
   * I click_on "toggle-lists" "class"
+  * I click_on "avatar" "class"
+  * I click_on "logout" "class"
+
+@iphone
+Scenario: Mobile iPhone Login/Logout with Facebook
+  * I am on the wunderlist home page
+  * I click_on "open-mobile-login" "class"
+  * I xpath "Log In With Facebook" "text"
+  * I submit mobile login form
+  * I click_on "list-list" "class"
   * I click_on "avatar" "class"
   * I click_on "logout" "class"

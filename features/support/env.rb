@@ -4,10 +4,10 @@ require 'selenium-webdriver'
 require 'rspec'
 require 'faker'
 
-caps = Selenium::WebDriver::Remote::Capabilities.ipad
+caps = Selenium::WebDriver::Remote::Capabilities.iphone
 caps.platform = 'OS X 10.8'
 caps.version = '5.1'
-caps[:name] = "Running tests in iPad Safari"
+caps[:name] = "Running tests in iPhone Safari"
 
 
 driver = Selenium::WebDriver.for(
@@ -20,7 +20,7 @@ Before do
   @driver.manage.window.maximize
   @driver.manage.window.move_to(0, 0)
   @target = 'https://www.wunderlist.com'
-  @time = 10
+  @time = 60
 end
 
 AfterStep do

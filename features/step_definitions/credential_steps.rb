@@ -1,6 +1,6 @@
 Given /I submit desktop login form/i do
   steps %Q{
-    * I wait "2"
+    * I wait until "email" "id" renders
     * I fill in "email" with "#{Keys.email}"
     * I fill in "pass" with "#{Keys.password}"
     * I click_on "u_0_1" "id"
@@ -17,4 +17,3 @@ Given /I submit mobile login form/i do
     * I xpath "Log In" "button"
   }
 end
-
