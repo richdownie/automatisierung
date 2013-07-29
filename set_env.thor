@@ -39,6 +39,16 @@ class Set < Thor
     copy_environment("iphone")
   end
 
+  desc "android_phone", "Run tests in Android Phone with Saucelabs"
+  def android_phone
+    copy_environment("android_phone")
+  end
+
+  desc "android_tablet", "Run tests in Android Tablet with Saucelabs"
+  def android_tablet
+    copy_environment("android_tablet")
+  end
+
   desc "edit", "Edit Tests"
   def edit
     copy_environment("edit")
