@@ -11,3 +11,6 @@
        $ bundle install
        $ thor set:chrome ('thor list' ~ to see all browser options)
        $ cucumber features -t @chrome
+
+
+5. Hi from blackboxd.com
